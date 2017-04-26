@@ -28,7 +28,6 @@ public class Menu {
 
     public Menu() {}
 
-    // list of cheeses add one cheese at a time
     public void addItem(Cheese item) {cheeses.add(item); }
 
     public int getId() {
@@ -41,6 +40,5 @@ public class Menu {
 
     public void setName(String name) {this.name = name;}
 
-    // do not set cheeses bc it already has its own controller
     public List<Cheese> getCheeses() {return cheeses;}
 }

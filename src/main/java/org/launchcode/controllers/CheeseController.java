@@ -33,7 +33,6 @@ public class CheeseController {
     CategoryDao categoryDao;
 
 
-
     @RequestMapping(value = "")
     public String index(Model model) {
 
@@ -54,7 +53,7 @@ public class CheeseController {
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String processAddCheeseForm(@ModelAttribute  @Valid Cheese newCheese,
+    public String processAddCheeseForm(@ModelAttribute @Valid Cheese newCheese,
                                        Errors errors, @RequestParam int categoryId, Model model) {
 
 
@@ -88,7 +87,7 @@ public class CheeseController {
     }
 
 
-    @RequestMapping(value = "category", method=RequestMethod.GET)
+    @RequestMapping(value = "category", method = RequestMethod.GET)
     public String category(Model model, @RequestParam int id) {
 
 
@@ -100,6 +99,5 @@ public class CheeseController {
         return "cheese/index";
 
 
-
-
     }
+}

@@ -37,7 +37,7 @@ public class MenuContoller {
         @RequestMapping(value = "")
         public String index(Model model) {
 
-            // adds empty menu
+
             model.addAttribute("title", "Menus");
             model.addAttribute("menus", menuDao.findAll());
             return "menu/index";
@@ -46,7 +46,7 @@ public class MenuContoller {
         @RequestMapping(value = "add", method = RequestMethod.GET)
         public String add(Model model) {
             model.addAttribute("title", "Add Menu");
-            // helps build the form and adds validation
+
             model.addAttribute(new Menu());
             return "menu/add";
         }
@@ -68,8 +68,7 @@ public class MenuContoller {
             Menu menu = menuDao.findOne(menuId);
             model.addAttribute("menu", menu);
             model.addAttribute("title", menu.getName());
-//        model.addAttribute("cheeses", menu.getCheeses());
-//        model.addAttribute("menuId", menu.getId());
+
 
             return "menu/view";
         }
